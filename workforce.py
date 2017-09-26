@@ -28,9 +28,11 @@ def makeDictionary(parsedCSV):
         dict[row[0]] = float(row[1])
     return dict
 
+#Given an integer total and a dictionary where values are 0-100,
+#returns a weightedly random job
 def randJob(total,dict):
     if total <= 0:
-        total = dict.pop("Total")
+        total = dict.pop("Total") * 10
     count=0;
     ranInt=random.randrange(0,total);
     for item in dict:
