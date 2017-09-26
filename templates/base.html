@@ -4,8 +4,29 @@
     <title>Occupations</title>
   </head>
   <body>
-    <p>
-      </p>
+    <h1>Occupations and Percentages</h1>
+    <p>The table below shows occupations and the percentages those occupations make up in the U.S. workforce:</p>
+    <table>
+      <tr>
+	<th>Job Class</th>
+	<th>Job Percentage</th>
+	</tr>
+      {%for key in data %}
+      <tr>
+	<td>
+	  {{key}}
+	</td>
+	<td>
+	  {{data[key]}}
+	</td>
+      </tr>
+	{% endfor %}
+	</table>
+</p>
+<p>
+  <b>Random occupation:</b><br>
+  {{ranName}}
+  </p>
   </body>
   </html> 
   
