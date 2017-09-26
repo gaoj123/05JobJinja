@@ -36,10 +36,10 @@ def randJob(total,dict):
         if(ranInt<count):
             return item;
 
-    
-file = open("occupations.csv", 'r')
-a = parseCSV(file.read(), False)
-total=float(a[-1][1])*10;
-a = a[:-1]
-dict = makeDictionary(a)
-file.close()
+if __name__ == "__main__":    
+    file = open("occupations.csv", 'r')
+    a = parseCSV(file.read(), False)
+    total=float(a[-1][1])*10;
+    a = a[:-1]
+    dict = makeDictionary(a)
+    file.close()
