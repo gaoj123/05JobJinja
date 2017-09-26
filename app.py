@@ -10,9 +10,10 @@ def root():
 @app.route("/occupations")
 def occupations():
     file = open("occupations.csv", "r")
-    content = file.read().replace("\n", "<br>")
+    data = workforce.parseCSV(file.read(), False)
+    data = workforce.makeDictionary(data)
     file.close()
-    return content
+    return workforce.randJob(-1, data)
 
 
 if __name__=="__main__":
