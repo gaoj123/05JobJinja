@@ -29,6 +29,8 @@ def makeDictionary(parsedCSV):
     return dict
 
 def randJob(total,dict):
+    if total <= 0:
+        total = dict.pop("Total")
     count=0;
     ranInt=random.randrange(0,total);
     for item in dict:
