@@ -6,7 +6,7 @@ app=Flask(__name__)
 def root():
     return render_template("base.html")
 
-@app.route("/occupation")
+@app.route("/occupations")
 def occupations():
    return 
 
