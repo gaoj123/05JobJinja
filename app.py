@@ -8,7 +8,7 @@ def root():
 
 @app.route("/occupation")
 def occupations():
-   #return 
+   return 
 
 
 if __name__=="__main__":
