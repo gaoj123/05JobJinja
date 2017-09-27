@@ -9,13 +9,10 @@ def root():
 
 @app.route("/occupations")
 def occupations():
-    return render_template("base.html",ranName=job(),data=dic())
+    dictionary = dic()
+    return render_template("base.html",ranName=job(dictionary), data=dictionary)
 
-def job():
-    file = open("occupations.csv", "r")
-    data = workforce.parseCSV(file.read(), False)
-    data = workforce.makeDictionary(data)
-    file.close()
+def job(data):
     return workforce.randJob(-1, data)
 
 def dic():
