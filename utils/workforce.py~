@@ -41,7 +41,7 @@ def randJob(total,dict):
             return item;
 
 if __name__ == "__main__":    
-    file = open("data/occupations.csv", 'r')
+    file = open("occupations.csv", 'r')
     a = parseCSV(file.read(), False)
     total=float(a[-1][1])*10;
     a = a[:-1]
