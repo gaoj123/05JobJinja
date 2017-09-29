@@ -16,7 +16,7 @@ def job(data):
     return workforce.randJob(-1, data)
 
 def dic():
-    file = open("occupations.csv", "r")
+    file = open("data/occupations.csv", "r")
     data = workforce.parseCSV(file.read(), False)
     data = workforce.makeDictionary(data)
     file.close()
