@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import workforce
+from utils import workforce
 
 app=Flask(__name__)
 
